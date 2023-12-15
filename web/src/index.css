@@ -103,6 +103,17 @@
 }
 
 @layer components {
+  .auth-form {
+    @apply mb-10
+  }
+  .auth-links {
+    @apply text-center text-white
+  }
+
+  .auth-links a {
+    @apply underline hover:no-underline
+  }
+
   .bg-auth {
     @apply min-h-screen w-screen bg-silverTree dark:bg-nileBlue bg-[center_top] bg-no-repeat bg-[length:1440px_auto] min-[1440px]:bg-[length:100%_auto];
   }
@@ -113,6 +124,10 @@
 
   .page-title {
     @apply font-condensed uppercase text-[116px] text-white leading-none mb-5
+  }
+
+  .error-message {
+    @apply text-orangeRed block py-2
   }
 
   .field {

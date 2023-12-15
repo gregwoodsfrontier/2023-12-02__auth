@@ -11,6 +11,8 @@ import { logger } from 'src/lib/logger'
 
 const authDecoder = createAuthDecoder(cookieName)
 
+const authDecoder = createAuthDecoder(cookieName)
+
 export const handler = createGraphQLHandler({
   authDecoder,
   getCurrentUser,
