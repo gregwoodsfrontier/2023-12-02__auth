@@ -13,6 +13,8 @@ const authDecoder = createAuthDecoder(cookieName)
 
 const authDecoder = createAuthDecoder(cookieName)
 
+const authDecoder = createAuthDecoder(cookieName)
+
 export const handler = createGraphQLHandler({
   authDecoder,
   getCurrentUser,
