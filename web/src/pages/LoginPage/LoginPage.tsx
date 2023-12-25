@@ -42,7 +42,7 @@ const LoginPage = () => {
   return (
     <>
       <MetaTags title="Login" />
-      <Toaster toastOptions={{ className: 'rw-toast', duration: 6000 }} />
+      
 
       <HeaderWithRulers heading={'LOGIN'} className="mb-8 text-white" />
       <Form onSubmit={onSubmit} className="auth-form">

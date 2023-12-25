@@ -15,6 +15,7 @@ import AuthLayout from './layouts/AuthLayout/AuthLayout'
 const Routes = () => {
   return (
     <Router useAuth={useAuth}>
+      <Route path="/groupinvite" page={GroupinvitePage} name="groupinvite" />
       <PrivateSet unauthenticated="login">
         <Route path="/dashboard" page={DashboardPage} name="dashboard" />
         <Set wrap={AuthLayout}>
