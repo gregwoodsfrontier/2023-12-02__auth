@@ -10,8 +10,8 @@ type InteriorLayoutProps = {
 const InteriorLayout = ({ children }: InteriorLayoutProps) => {
   return (
     <>
-    <Toaster />
-      <main className="bg-interior">
+      <Toaster />
+      <main className="bg-interior pb-20">
         <aside className="col-span-4 bg-no-repeat pb-10">
           <img src="/images/bg__interior.svg" alt="" />
           <img

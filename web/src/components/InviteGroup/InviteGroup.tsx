@@ -2,7 +2,8 @@ import { EmailField, Form, Label, TextField, useForm } from '@redwoodjs/forms'
 import { useMutation } from '@redwoodjs/web'
 import { toast } from '@redwoodjs/web/dist/toast'
 
-import Card from '../Card/Card'
+import ListInvitesCell from '../ListInvitesCell'
+import { QUERY } from '../ListInvitesCell/ListInvitesCell'
 import RoundButton from '../RoundButton/RoundButton'
 
 const CREATE_INVITE_MUTATION = gql`
@@ -34,6 +35,7 @@ const InviteGroup = ({ id }) => {
       toast.success('Invite sent!')
       formMethods.reset()
     },
+    refetchQueries: [QUERY],
   })
 
   const handleSubmit = (data) => {
@@ -76,22 +78,7 @@ const InviteGroup = ({ id }) => {
       </Form>
 
       <div className="grid grid-cols-2 gap-x-12 gap-y-8">
-        <Card
-          avatar={{
-            alt: 'Avatar',
-            avatar: 'https://picsum.photos/seed/1701322447715/300/300',
-          }}
-          email="email@email.com"
-          name="Amy Dutton"
-        />
-        <Card
-          avatar={{
-            alt: 'Avatar',
-            avatar: 'https://picsum.photos/seed/1701322447715/300/300',
-          }}
-          email="email@email.com"
-          name="Amy Dutton"
-        />
+        <ListInvitesCell id={id} />
       </div>
     </div>
   )
