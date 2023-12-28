@@ -3,7 +3,7 @@ import { useMutation } from '@redwoodjs/web'
 import { toast } from '@redwoodjs/web/dist/toast'
 
 import ListInvitesCell from '../ListInvitesCell'
-import { QUERY } from '../ListInvitesCell/ListInvitesCell'
+import { QUERY as LIST_INVITE_QUERY } from '../ListInvitesCell/ListInvitesCell'
 import RoundButton from '../RoundButton/RoundButton'
 
 const CREATE_INVITE_MUTATION = gql`
@@ -35,7 +35,7 @@ const InviteGroup = ({ id }) => {
       toast.success('Invite sent!')
       formMethods.reset()
     },
-    refetchQueries: [QUERY],
+    refetchQueries: [{ query: LIST_INVITE_QUERY }],
   })
 
   const handleSubmit = (data) => {
