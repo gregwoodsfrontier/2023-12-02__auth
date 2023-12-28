@@ -3,13 +3,12 @@ export const schema = gql`
     id: Int!
     email: String!
 
-    firstName: String
-    lastName: String
+    name: String
     avatar: String
     createdAt: DateTime!
     updatedAt: DateTime!
     role: Role!
-    status: [UserStatus]!
+    invite: [Invite]!
     santa: [Pairing]!
     person: [Pairing]!
     wishList: [WishList]!
